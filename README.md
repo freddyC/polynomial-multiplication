@@ -9,7 +9,7 @@ polynomial-multiplication
 ### Four Multiplications
   Recursive devide and conquor with 4 multiplications happening
 
-### Simple 
+### Three Multiplications 
   Recursive solution using only 3 mulitlications
 
 
