@@ -7,7 +7,7 @@ polynomial-multiplication
   2 nested for
 
 ### Four Multiplications
-  Recursive devide and conquor with 4 multiplications happening
+  Recursive divide and conquer with 4 multiplications happening
 
 ### Three Multiplications 
   Recursive solution using only 3 mulitlications
