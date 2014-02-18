@@ -3,6 +3,9 @@
 *.lo
 *.o
 
+*poly-mult
+*poly-mult.dSYM/
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
