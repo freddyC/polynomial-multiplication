@@ -1,0 +1,96 @@
+For polynomials of size 2
+
+simple = 8.44
+fourMult = 16.48
+threeMult = 15.4
+
+
+For polynomials of size 4
+
+simple = 15.12
+fourMult = 47
+threeMult = 40.92
+
+
+For polynomials of size 8
+
+simple = 29
+fourMult = 166.6
+threeMult = 104.8
+
+
+For polynomials of size 16
+
+simple = 58.08
+fourMult = 616.48
+threeMult = 318.96
+
+
+For polynomials of size 32
+
+simple = 134.4
+fourMult = 2344.12
+threeMult = 887.12
+
+
+For polynomials of size 64
+
+simple = 243.28
+fourMult = 9219.64
+threeMult = 2553.52
+
+
+For polynomials of size 128
+
+simple = 568.84
+fourMult = 35923.4
+threeMult = 7501.32
+
+
+For polynomials of size 256
+
+simple = 1459.92
+fourMult = 142275
+threeMult = 21735.7
+
+
+For polynomials of size 512
+
+simple = 4253.32
+fourMult = 542778
+threeMult = 63156.3
+
+
+For polynomials of size 1024
+
+simple = 13337
+fourMult = 2.20604e+06
+threeMult = 190547
+
+
+For polynomials of size 2048
+
+simple = 48018.1
+fourMult = 8.78356e+06
+threeMult = 593698
+
+
+For polynomials of size 4096
+
+simple = 178244
+fourMult = 3.53479e+07
+threeMult = 1.76176e+06
+
+
+For polynomials of size 8192
+	
+simple = 681349
+fourMult = -3.18108e+07
+threeMult = 4.90148e+06
+
+
+For polynomials of size 16384
+
+simple = 2.6175e+06
+fourMult = 1.63901e+07
+threeMult = 1.43434e+07

@@ -4,20 +4,21 @@
 #include <iostream>
 #include <numeric>
 
-std::vector<int> simple (std::vector<int> p, std::vector<int> q);
-std::vector<int> fourMult (std::vector<int> p, std::vector<int> q);
-std::vector<int> threeMult (std::vector<int> p, std::vector<int> q);
+std::vector<int> simple (std::vector<int> &p, std::vector<int> &q);
+std::vector<int> fourMult (std::vector<int> &p, std::vector<int> &q);
+std::vector<int> threeMult (std::vector<int> &p, std::vector<int> &q);
 
-const int N = 8;
-const int VALUE_MIN = 1;
-const int VALUE_MAX = 5;
+const int VALUE_MIN = -10;
+const int VALUE_MAX = 10;
 
 int main() {
   //////////////////////////////////////////////////////
   ////////// TO TEST UNCOMENT THIS CODE ////////////////
   //////////////////////////////////////////////////////
-  // std::vector<int> p(N);
-  // std::vector<int> q(N);
+  // int n = 8;
+
+  // std::vector<int> p(n);
+  // std::vector<int> q(n);
 
   // std::random_device rd;
   // std::uniform_int_distribution<int> dist(VALUE_MIN, VALUE_MAX);
@@ -31,12 +32,12 @@ int main() {
   // });
 
   // std::cout << "\nP = ";
-  // for (int i = 0; i < N; ++i) {
+  // for (int i = 0; i < n; ++i) {
   //   std::cout << p[i] << ' ';
   // }
 
   // std::cout << "\nQ = ";
-  // for (int i = 0; i < N; ++i) {
+  // for (int i = 0; i < n; ++i) {
   //   std::cout << q[i] << ' ';
   // }
 
@@ -50,13 +51,13 @@ int main() {
   // });
 
   // temp_res = fourMult(p, q);
-  // std::cout << "\nFour Multiplication Results: ";
+  // std::cout << "\nFour Mult-Results: ";
   // std::for_each(temp_res.begin(), temp_res.end(), [] (int val) {
   //   std::cout << val << " ";
   // });
 
   // temp_res = threeMult(p, q);
-  // std::cout << "\nThree Multiplication Results: ";
+  // std::cout << "\nThree Mult-Results: ";
   // std::for_each(temp_res.begin(), temp_res.end(), [] (int val) {
   //   std::cout << val << " ";
   // });
@@ -76,7 +77,7 @@ int main() {
   std::random_device rd;
   std::uniform_int_distribution<int> dist(VALUE_MIN, VALUE_MAX);
 
-  for (int j = 2; j < 32768; j *= 2) {
+  for (int j = 2; j <= 8192; j *= 2) {
 
     p.resize(j);
     q.resize(j);
@@ -90,7 +91,7 @@ int main() {
     });
 
 
-    std::cout << "\n\nFor polynomials of size " << j << "\n";
+    std::cout << "\n\nFor polynomials of size " << j;
 
     auto simple_res     = funcEval([&] () {
       for (int i = 0; i < p.size(); ++i) {
@@ -119,10 +120,11 @@ int main() {
   std::cout << "\nsimple = " << simple_res.first << "\nfourMult = " << fourMult_res.first << "\nthreeMult = " << threeMult_res.first << std::endl;
   }
 
+  std::cout << "ALL DONE\n";
   return 0;
 }
 
-std::vector<int> simple (std::vector<int> p, std::vector<int> q) {
+std::vector<int> simple (std::vector<int> &p, std::vector<int> &q) {
   std::vector<int> result (p.size() + q.size() - 1, 0);
   for (int i = 0; i < p.size(); ++i) {
     for (int j = 0; j < q.size(); ++j) {
@@ -132,7 +134,7 @@ std::vector<int> simple (std::vector<int> p, std::vector<int> q) {
   return result;
 }
 
-std::vector<int> fourMult (std::vector<int> p, std::vector<int> q) {
+std::vector<int> fourMult (std::vector<int> &p, std::vector<int> &q) {
   if (p.size() == 1 || q.size() == 1) {
     auto res = simple(p,q);
     return res;
@@ -190,7 +192,7 @@ std::vector<int> fourMult (std::vector<int> p, std::vector<int> q) {
 }
 
 
-std::vector<int> threeMult (std::vector<int> p, std::vector<int> q) {
+std::vector<int> threeMult (std::vector<int> &p, std::vector<int> &q) {
   if (p.size() == 1 || q.size() == 1) {
     auto res = simple(p,q);
     return res;
